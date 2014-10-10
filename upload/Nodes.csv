@@ -1,0 +1,166 @@
+Node_ID,Statistical Local Area Name,X,Y,Cluster_ID
+1,Alpine (S) - East,147.0469336,-36.88686162,5
+3,Ararat (RC),142.8431707,-37.47271844,7
+4,Ballarat (C) - Central,143.8618373,-37.56285905,7
+5,Ballarat (C) - Inner North,143.782021,-37.51088121,7
+6,Ballarat (C) - North,143.7309046,-37.39687633,7
+7,Ballarat (C) - South,143.8730686,-37.64243998,7
+8,Banyule (C) - Heidelberg,145.0657066,-37.74720465,9
+9,Banyule (C) - North,145.1063679,-37.71213108,9
+10,Bass Coast (S) - Phillip Is.,145.2407926,-38.49066712,2
+11,Bass Coast (S) Bal,145.5995343,-38.50929109,2
+12,Baw Baw (S) - Pt A,146.2740274,-38.12109831,4
+13,Baw Baw (S) - Pt B East,146.271287,-37.92593723,4
+14,Baw Baw (S) - Pt B West,145.9179033,-38.03442932,4
+15,Bayside (C) - Brighton,145.0041382,-37.91182838,2
+16,Bayside (C) - South,145.0264187,-37.95953513,2
+17,Bellarine - Inner,144.435593,-38.18468072,3
+20,Boroondara (C) - Camberwell N.,145.0827762,-37.80222431,10
+21,Boroondara (C) - Camberwell S.,145.0765616,-37.84649063,10
+22,Boroondara (C) - Hawthorn,145.0393708,-37.82796836,10
+23,Boroondara (C) - Kew,145.0384685,-37.79993219,10
+24,Brimbank (C) - Keilor,144.8047308,-37.71180261,1
+25,Brimbank (C) - Sunshine,144.8020169,-37.78010125,1
+26,Buloke (S) - North,142.9469705,-35.74122472,0
+27,Buloke (S) - South,143.1279991,-36.27581952,5
+28,C. Goldfields (S) - M'borough,143.7426212,-37.05183814,7
+30,Campaspe (S) - Echuca,144.7462697,-36.14307701,5
+31,Campaspe (S) - Kyabram,144.9364422,-36.26187958,5
+32,Campaspe (S) - Rochester,144.5088993,-36.1970111,5
+33,Campaspe (S) - South,144.8366694,-36.589424,5
+34,Cardinia (S) - North,145.6056034,-38.01580176,2
+35,Cardinia (S) - Pakenham,145.4665189,-38.07834035,2
+36,Cardinia (S) - South,145.5710128,-38.22367739,2
+37,Casey (C) - Berwick,145.3308048,-38.01861906,2
+38,Casey (C) - Cranbourne,145.2772544,-38.09219551,2
+39,Casey (C) - Hallam,145.2630495,-37.9814028,2
+40,Casey (C) - South,145.3223204,-38.16893605,2
+41,Colac-Otway (S) - Colac,143.5866046,-38.34825854,0
+46,Corio - Inner,144.3329096,-38.06622158,3
+47,Darebin (C) - Northcote,145.007415,-37.76767664,9
+48,Darebin (C) - Preston,145.016795,-37.72128237,9
+49,E. Gippsland (S) - Bairnsdale,147.7392805,-37.88654174,4
+50,E. Gippsland (S) - Orbost,148.7122194,-37.42064264,4
+51,E. Gippsland (S) - South-West,147.4672083,-37.70200328,0
+53,Frankston (C) - East,145.2011244,-38.13539914,11
+54,Frankston (C) - West,145.1466394,-38.13382209,11
+55,Gannawarra (S),143.8042323,-35.75158154,2
+56,Geelong,144.3706244,-38.1638899,3
+57,Geelong West,144.3403707,-38.13508275,3
+58,Glen Eira (C) - Caulfield,145.034089,-37.88720536,2
+59,Glen Eira (C) - South,145.0540671,-37.92005913,2
+62,Golden Plains (S) - North-West,143.6440012,-37.75727821,7
+63,Golden Plains (S) - South-East,143.9657998,-37.95956362,3
+64,Gr. Bendigo (C) - Central,144.2673458,-36.75564643,8
+65,Gr. Bendigo (C) - Eaglehawk,144.2539141,-36.72301068,8
+66,Gr. Bendigo (C) - Inner East,144.2914563,-36.77789671,8
+67,Gr. Bendigo (C) - Inner North,144.317049,-36.68563404,8
+68,Gr. Bendigo (C) - Inner West,144.1917349,-36.76806056,8
+69,Gr. Bendigo (C) - Pt B,144.4522784,-36.73193339,8
+70,Gr. Bendigo (C) - S'saye,144.338431,-36.78794133,8
+71,Gr. Dandenong (C) - Dandenong,145.2046416,-37.98657996,2
+72,Gr. Dandenong (C) Bal,145.1837524,-38.01367913,2
+73,Gr. Shepparton (C) - Pt A,145.3994805,-36.38998181,5
+74,Gr. Shepparton (C) - Pt B East,145.5509766,-36.37774201,5
+75,Gr. Shepparton (C) - Pt B West,145.1965265,-36.4213637,5
+76,Greater Geelong (C) - Pt B,144.5736233,-38.20599158,3
+77,Greater Geelong (C) - Pt C,144.3775841,-37.94246229,3
+78,Hepburn (S) - East,144.2133236,-37.30136054,7
+79,Hepburn (S) - West,143.9025437,-37.33243882,7
+81,Hobsons Bay (C) - Altona,144.8116834,-37.85719052,1
+82,Hobsons Bay (C) - Williamstown,144.8833613,-37.84739557,1
+83,Horsham (RC) - Central,142.1962282,-36.71892401,7
+84,Hume (C) - Broadmeadows,144.9258681,-37.67292899,1
+85,Hume (C) - Craigieburn,144.884563,-37.5996382,1
+86,Hume (C) - Sunbury,144.7495402,-37.56375881,1
+87,Kingston (C) - North,145.0983853,-37.96919373,2
+88,Kingston (C) - South,145.1251894,-38.04691397,2
+89,Knox (C) - North-East,145.2869471,-37.86609139,6
+90,Knox (C) - North-West,145.2261344,-37.87192728,6
+91,Knox (C) - South,145.2558118,-37.92334836,6
+92,Latrobe (C) - Moe,146.308778,-38.17186349,4
+93,Latrobe (C) - Morwell,146.3687429,-38.28306111,4
+94,Latrobe (C) - Traralgon,146.5615783,-38.16373987,4
+95,Latrobe (C) Bal,146.4136463,-38.40177339,4
+96,Loddon (S) - North,143.9778157,-36.16867054,0
+97,Loddon (S) - South,143.7656997,-36.54285528,8
+98,Macedon Ranges (S) - Kyneton,144.5134362,-37.22171473,8
+99,Macedon Ranges (S) - Romsey,144.7661777,-37.37083063,1
+100,Macedon Ranges (S) Bal,144.5521307,-37.41114409,1
+101,Manningham (C) - East,145.2333639,-37.75114194,6
+102,Manningham (C) - West,145.1416639,-37.77252706,10
+103,Mansfield (S),146.2068532,-37.20039644,2
+104,Maribyrnong (C),144.8777723,-37.79526741,1
+105,Maroondah (C) - Croydon,145.2822635,-37.80073304,6
+106,Maroondah (C) - Ringwood,145.2378299,-37.81155077,6
+107,Melbourne (C) - Inner,144.9629703,-37.81483963,1
+108,Melbourne (C) - Remainder,144.9421368,-37.80866479,1
+109,Melbourne (C) - S'bank-D'lands,144.9476049,-37.82069284,1
+110,Melton (S) - East,144.7277753,-37.72367256,1
+111,Melton (S) Bal,144.6044994,-37.68652932,1
+112,Mitchell (S) - North,144.9788216,-37.04321093,3
+113,Mitchell (S) - South,145.0461561,-37.32164053,1
+114,Moira (S) - East,145.9101093,-36.1445491,5
+115,Moira (S) - West,145.3318135,-36.01165804,5
+116,Monash (C) - South-West,145.1092729,-37.90929757,2
+117,Monash (C) - Waverley East,145.1826501,-37.90519489,2
+118,Monash (C) - Waverley West,145.1337141,-37.88202132,2
+119,Moonee Valley (C) - Essendon,144.9147208,-37.75995817,1
+120,Moonee Valley (C) - West,144.8786644,-37.7400673,1
+121,Moorabool (S) - Bacchus Marsh,144.414999,-37.65349687,1
+122,Moorabool (S) - Ballan,144.2179731,-37.61469888,7
+123,Moorabool (S) - West,144.0086618,-37.63922272,0
+124,Moreland (C) - Brunswick,144.9593613,-37.76614344,1
+125,Moreland (C) - Coburg,144.956358,-37.7363854,1
+126,Moreland (C) - North,144.9376463,-37.70706142,1
+127,Mornington P'sula (S) - East,145.1447667,-38.30984097,11
+128,Mornington P'sula (S) - South,144.9285381,-38.39932215,11
+129,Mornington P'sula (S) - West,145.0643565,-38.24759071,11
+130,Mount Alexander (S) - C'maine,144.2194995,-37.05900761,8
+131,Mount Alexander (S) Bal,144.1925321,-37.05066505,8
+133,Moyne (S) - South,142.4927884,-38.33842346,3
+134,Murrindindi (S) - East,145.7871788,-37.3281893,6
+135,Murrindindi (S) - West,145.4181152,-37.28774914,5
+136,N. Grampians (S) - St Arnaud,143.1820491,-36.6678667,0
+137,N. Grampians (S) - Stawell,142.7221435,-36.97775922,0
+138,Newtown,144.3336531,-38.15333141,3
+139,Nillumbik (S) - South,145.2020997,-37.70516699,9
+140,Nillumbik (S) - South-West,145.1407755,-37.66003733,9
+141,Nillumbik (S) Bal,145.2603134,-37.59935526,9
+142,Port Phillip (C) - St Kilda,144.9867809,-37.86919339,2
+143,Port Phillip (C) - West,144.9504442,-37.83908181,1
+144,Pyrenees (S) - North,143.3902873,-37.14231116,0
+145,Pyrenees (S) - South,143.3553772,-37.54106349,7
+146,Queenscliffe (B),144.647714,-38.26428086,3
+147,South Barwon - Inner,144.3242945,-38.2074655,3
+148,South Gippsland (S) - Central,146.0023209,-38.55380635,4
+149,South Gippsland (S) - East,146.2677719,-38.77820721,4
+151,Stonnington (C) - Malvern,145.0509783,-37.86521449,2
+152,Stonnington (C) - Prahran,145.0045784,-37.84577277,2
+153,Strathbogie (S),145.4349175,-36.76033145,5
+154,Surf Coast (S) - East,144.2149498,-38.23373889,3
+155,Surf Coast (S) - West,144.0050356,-38.3356466,3
+156,Swan Hill (RC) - Central,143.5456244,-35.34173881,2
+157,Wangaratta (RC) - Central,146.3105532,-36.36329168,3
+160,Warrnambool (C),142.511787,-38.37145289,3
+161,Wellington (S) - Alberton,146.7495545,-38.49926696,4
+163,Wellington (S) - Maffra,146.7797919,-37.62923225,0
+164,Wellington (S) - Rosedale,146.9959849,-38.18392318,4
+165,Wellington (S) - Sale,147.0608353,-38.10599767,4
+166,Whitehorse (C) - Box Hill,145.1186466,-37.82574417,10
+167,Whitehorse (C) - Nunawading E.,145.1918822,-37.8345114,10
+168,Whitehorse (C) - Nunawading W.,145.1549241,-37.8305261,10
+169,Whittlesea (C) - North,145.0835635,-37.5314266,9
+170,Whittlesea (C) - South-East,145.0645625,-37.67200714,9
+171,Whittlesea (C) - South-West,145.0138805,-37.66765694,9
+172,Wodonga (RC),146.8826174,-36.15055605,5
+173,Wyndham (C) - North,144.6905685,-37.8428191,1
+174,Wyndham (C) - South,144.6771394,-37.94341394,1
+175,Wyndham (C) - West,144.5447706,-37.88051633,1
+176,Yarra (C) - North,144.9959849,-37.7926631,1
+177,Yarra (C) - Richmond,145.0040459,-37.82290665,1
+178,Yarra Ranges (S) - Central,145.6518668,-37.81512926,6
+179,Yarra Ranges (S) - Dandenongs,145.3627498,-37.89363115,6
+180,Yarra Ranges (S) - Lilydale,145.347724,-37.7709602,6
+181,Yarra Ranges (S) - North,145.4993374,-37.63157123,6
+183,Yarra Ranges (S) - Seville,145.4444712,-37.77207181,6

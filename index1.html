@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Melbourne Travel Demand Network</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="js/sigma.min.js"></script>
+    <script src="js/sigma.parseJson.js"></script>
+    <style>
+        body{padding:0; margin:0;}
+    </style>
+</head>
+<body>
+
+<div class="control" style="background-color: #000; color:#eee; z-index: 12; width: 280px; height: 300px; position:absolute;
+top:20px; right: 20px; border-radius: 8px; line-height: 1.4em;font-family: Calibri; font-size: 14;
+text-align: center;">
+<div class="title" style="font-size: 18px; padding-top: 10px; text-align: left; padding-left: 25px;">
+    <b>Melbourne Travel Demand Complex Network</b><br/><br/>
+    <p style="font-size: 14px;">
+        Enenech fimublu. Cufoni neasa wote dase kani deryebe ou theasi sak prawha diw rire juote num nexe.
+        Egootinizosa heloo. Rinatamo sesoo leto Watesera rasulo ocisi cety quehataho ciri thee hete.
+        Vano chye truse sak. Ah sessi truse tas.
+    </p>
+    <p><a href="#">Learn more</a></p>
+    </div>
+</div>
+<div class="container-fluid">
+        <div class="row" id="control1" style="z-index: 2; padding:0; margin:0;">
+            <div  id="container" style="background-color: #000; height: 700px;"></div>
+        </div>
+</div>
+
+
+<script>
+    function init() {
+
+
+
+        /**
+         * This is the code to write the FishEye plugin :
+         */
+
+        (function(){
+
+            // First, let's write a FishEye class.
+            // There is no need to make this class global, since it is made to be used through
+            // the SigmaPublic object, that's why a local scope is used for the declaration.
+            // The parameter 'sig' represents a Sigma instance.
+            var FishEye = function(sig) {
+                sigma.classes.Cascade.call(this);      // The Cascade class manages the chainable property
+                                                       // edit/get function.
+
+                var self = this;                       // Used to avoid any scope confusion.
+                var isActivated = false;               // Describes is the FishEye is activated.
+
+                this.p = {                             // The object containing the properties accessible with
+                    radius: 200,                         // the Cascade.config() method.
+                    power: 2
+                };
+
+                function applyFishEye(mouseX, mouseY) {   // This method will apply a formula relatively to
+                    // the mouse position.
+                    var newDist, newSize, xDist, yDist, dist,
+                            radius   = self.p.radius,
+                            power    = self.p.power,
+                            powerExp = Math.exp(power);
+
+                    sig.graph.nodes.forEach(function(node) {
+                        xDist = node.displayX - mouseX;
+                        yDist = node.displayY - mouseY;
+                        dist  = Math.sqrt(xDist*xDist + yDist*yDist);
+
+                        if(dist < radius){
+                            newDist = powerExp/(powerExp-1)*radius*(1-Math.exp(-dist/radius*power));
+                            newSize = powerExp/(powerExp-1)*radius*(1-Math.exp(-dist/radius*power));
+
+                            if(!node.isFixed){
+                                node.displayX = mouseX + xDist*(newDist/dist*3/4 + 1/4);
+                                node.displayY = mouseY + yDist*(newDist/dist*3/4 + 1/4);
+                            }
+
+                            node.displaySize = Math.min(node.displaySize*newSize/dist,10*node.displaySize);
+                        }
+                    });
+                };
+
+                // The method that will be triggered when Sigma's 'graphscaled' is dispatched.
+                function handler() {
+                    applyFishEye(
+                            sig.mousecaptor.mouseX,
+                            sig.mousecaptor.mouseY
+                    );
+                }
+
+                this.handler = handler;
+
+                // A public method to set/get the isActivated parameter.
+                this.activated = function(v) {
+                    if(v==undefined){
+                        return isActivated;
+                    }else{
+                        isActivated = v;
+                        return this;
+                    }
+                };
+
+                // this.refresh() is just a helper to draw the graph.
+                this.refresh = function(){
+                    sig.draw(2,2,2);
+                };
+            };
+
+            // Then, let's add some public method to sigma.js instances :
+            sigma.publicPrototype.activateFishEye = function() {
+                if(!this.fisheye) {
+                    var sigmaInstance = this;
+                    var fe = new FishEye(sigmaInstance._core);
+                    sigmaInstance.fisheye = fe;
+                }
+
+                if(!this.fisheye.activated()){
+                    this.fisheye.activated(true);
+                    this._core.bind('graphscaled', this.fisheye.handler);
+                    document.getElementById(
+                            'sigma_mouse_'+this.getID()
+                    ).addEventListener('mousemove',this.fisheye.refresh,true);
+                }
+
+                return this;
+            };
+
+            sigma.publicPrototype.desactivateFishEye = function() {
+                if(this.fisheye && this.fisheye.activated()){
+                    this.fisheye.activated(false);
+                    this._core.unbind('graphscaled', this.fisheye.handler);
+                    document.getElementById(
+                            'sigma_mouse_'+this.getID()
+                    ).removeEventListener('mousemove',this.fisheye.refresh,true);
+                }
+
+                return this;
+            };
+
+            sigma.publicPrototype.fishEyeProperties = function(a1, a2) {
+                var res = this.fisheye.config(a1, a2);
+                return res == s ? this.fisheye : res;
+            };
+        })();
+
+
+        // Instanciate sigma.js and customize rendering :
+        var sigInst = sigma.init(document.getElementById('container')).drawingProperties({
+            defaultLabelColor: '#fff',
+            defaultLabelSize: 15,
+            defaultLabelBGColor: '#fff',
+            defaultLabelHoverColor: '#000',
+            labelThreshold: 33
+           // defaultEdgeType: 'curve'
+        }).graphProperties({
+            minNodeSize: 0.5,
+            maxNodeSize: 2.5,
+            minEdgeSize: 0.4,
+            maxEdgeSize: 0.5
+        }).mouseProperties({
+            maxRatio: 4
+        });
+
+        // Parse a GEXF encoded file to fill the graph
+        // (requires "sigma.parseGexf.js" to be included)
+        sigInst.parseJson('newTrip.json');
+
+
+
+        // Bind events :
+        sigInst.bind('overnodes',function(event){
+            var nodes = event.content;
+            var neighbors = {};
+            sigInst.iterEdges(function(e){
+                if(nodes.indexOf(e.source)>=0 || nodes.indexOf(e.target)>=0){
+                    neighbors[e.source] = 1;
+                    neighbors[e.target] = 1;
+                }
+            }).iterNodes(function(n){
+                if(!neighbors[n.id]){
+                    n.hidden = 1;
+                }else{
+                    n.hidden = 0;
+                }
+            }).draw(2,2,2);
+        }).bind('outnodes',function(){
+            sigInst.iterEdges(function(e){
+                e.hidden = 0;
+            }).iterNodes(function(n){
+                n.hidden = 0;
+            }).draw(2,2,2);
+        });
+
+        // Mod Dmitry
+
+
+        sigInst.bind('downnodes',function(event){
+            var node;
+            sigInst.iterNodes(function(n){
+                node = n;
+            },[event.content[0]]);
+            window.open("http://www.monash.edu");
+        });
+
+// Mod Dmitry
+
+        // Draw the graph :
+//  sigInst.draw();
+        sigInst.activateFishEye().draw();
+
+    }
+
+    if (document.addEventListener) {
+        document.addEventListener("DOMContentLoaded", init, false);
+    } else {
+        window.onload = init;
+    }
+
+</script>
+</body>
+</html>

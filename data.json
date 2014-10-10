@@ -1,0 +1,96 @@
+ {
+  "nodes": [
+    {
+      "id": "n0",
+      "label": "Node 1",
+      "x": 0,
+      "y": 0,
+      "size": 3,
+      "color": "#ec5148"
+    },
+    {
+      "id": "n1",
+      "label": "Node 2",
+      "x": 3,
+      "y": 1,
+      "size": 2,
+      "color": "#ec5148"
+    },
+    {
+      "id": "n2",
+      "label": "Node 3",
+      "x": 1,
+      "y": 3,
+      "size": 1,
+      "color": "#ec5148"
+    },
+     {
+      "id": "n3",
+      "label": "Node 4",
+      "x": 10,
+      "y": 3,
+      "size": 3,
+      "color": "#ec5148"
+    },
+    {
+      "id": "n4",
+      "label": "Node 5",
+      "x": 7,
+      "y": 9,
+      "size": 3,
+      "color": "#ec5148"
+    },
+    {
+      "id": "n5",
+      "label": "Node 6",
+      "x": 3,
+      "y": 4,
+      "size": 3,
+      "color": "#ec5148"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "n0",
+      "target": "n1",
+      "color": "#ec5148",
+      "type": "curve"
+    },
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n2",
+      "color": "#ec5148",
+       "type": "curve"
+    },
+    {
+      "id": "e2",
+      "source": "n2",
+      "target": "n0",
+      "color": "#ec5148",
+      "type": "curve"
+    },
+    {
+      "id": "e3",
+      "source": "n1",
+      "target": "n3",
+      "color": "#ec5148",
+      "type": "curve"
+    },
+    {
+      "id": "e4",
+      "source": "n0",
+      "target": "n4",
+      "color": "#ec5148",
+       "type": "curve"
+    },
+    {
+      "id": "e5",
+      "source": "n2",
+      "target": "n5",
+      "color": "#ec5148",
+       "type": "curve"
+    }
+  ]
+}
